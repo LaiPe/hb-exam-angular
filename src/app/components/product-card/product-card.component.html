@@ -12,9 +12,9 @@
         </ul>
 
         <p class="price">
-            <span [ngClass]="{'old-price' : product.discountPercent}">{{product.fullPrice}}</span>
+            <span [ngClass]="{'old-price' : product.discountPercent}">{{product.fullPrice | currency:'EUR'}}</span>
             @if (product.discountPercent) {
-                <span class="discount-price">{{(product.fullPrice - ( product.fullPrice * product.discountPercent)) | number:'1.2-2'}}</span>
+                <span class="discount-price">{{(product.fullPrice - ( product.fullPrice * product.discountPercent)) | number:'1.2-2' | currency:'EUR'}}</span>
             }
         </p>   
     </div>
