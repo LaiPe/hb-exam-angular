@@ -1,8 +1,8 @@
-<div>
+<div class="product-card">
     <img [src]="product.image" [alt]="product.title" width="150px">
     <div>
         <h4>{{product.title}}</h4>
-        <p>{{product.description}}</p>
+        <p class="product-content">{{product.description}}</p>
 
         <h5>Caractéristiques</h5>
         <ul>
@@ -16,11 +16,6 @@
             @if (product.discountPercent) {
                 <span class="discount-price">{{(product.fullPrice - ( product.fullPrice * product.discountPercent)) | number:'1.2-2'}}</span>
             }
-        </p>
-
-
-        
+        </p>   
     </div>
 </div>
-
-
