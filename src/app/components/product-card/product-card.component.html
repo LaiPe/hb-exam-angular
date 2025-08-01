@@ -1,0 +1,26 @@
+<div>
+    <img [src]="product.image" [alt]="product.title" width="150px">
+    <div>
+        <h4>{{product.title}}</h4>
+        <p>{{product.description}}</p>
+
+        <h5>Caractéristiques</h5>
+        <ul>
+            @for (feat of product.features; track feat.title) {
+                <li><i class="material-icons">{{feat.icon}}</i><b class="feat-title">{{feat.title}} : </b><span class="feat-descr">{{feat.description}}</span></li>
+            }
+        </ul>
+
+        <p class="price">
+            <span [ngClass]="{'old-price' : product.discountPercent}">{{product.fullPrice}}</span>
+            @if (product.discountPercent) {
+                <span class="discount-price">{{(product.fullPrice - ( product.fullPrice * product.discountPercent)) | number:'1.2-2'}}</span>
+            }
+        </p>
+
+
+        
+    </div>
+</div>
+
+
