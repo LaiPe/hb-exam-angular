@@ -7,7 +7,7 @@
         <h5>Caractéristiques</h5>
         <ul>
             @for (feat of product.features; track feat.title) {
-                <li><i class="material-icons">{{feat.icon}}</i><b class="feat-title">{{feat.title}} : </b><span class="feat-descr">{{feat.description}}</span></li>
+                <li><span class="feat-header"><i class="material-icons">{{feat.icon}}</i><b class="feat-title">{{feat.title}} : </b></span><span class="feat-descr">{{feat.description}}</span></li>
             }
         </ul>
 

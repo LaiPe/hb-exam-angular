@@ -8,6 +8,7 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  font-size: 0.8rem;
 }
 
 .product-card:hover {
@@ -60,9 +61,15 @@
 
 .product-card li {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 8px;
   padding: 5px 0;
+}
+
+.product-card .feat-header {
+    display: flex;
+    align-items: center;
 }
 
 /* Icônes Material */
@@ -76,6 +83,7 @@
 .feat-title {
   color: #333;
   margin-right: 5px;
+  width: 100%;
 }
 
 /* Description des caractéristiques */
